@@ -5,10 +5,10 @@ export default yup.object().shape({
         .required('name is required')
         .min(3, 'Username must be 3 chars or longer'),
     email: yup.string()
-        .email('Must be a valid email')
-        .required('Email is required'),
+        .email('Valid email required')
+        .required('Valid email required'),
     password: yup.string()
         .required('password is required')
-        .min(7, 'password must be atleast 7 chars'),
+        .min(7, 'password is too short'),
     tos: yup.boolean(),
 })

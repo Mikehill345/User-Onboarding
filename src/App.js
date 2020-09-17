@@ -41,6 +41,7 @@ export default function App() {
       .then(res => {
         setUsers([...users, newUser])
         setFormValues(initialFormValues)
+        console.log(JSON.stringify(res.data))
       })
       .catch(err => {
         console.log(err)
@@ -79,7 +80,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>User Signup and List</h1>
-
+        <p>learn react</p>
       <UserForm
         values={formValues}
         change={inputChange}
