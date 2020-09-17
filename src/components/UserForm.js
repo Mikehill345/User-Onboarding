@@ -30,21 +30,23 @@ export default function UserForm(props) {
 
             <div className='form-container'>
                 <h4>Information</h4>
-                <label>Name
+                <label>Name:
                     <input
                         value={values.name}
                         onChange={onChange}
                         name='name'
                         type='text'
+                        placeholder='Enter Name'
                     />
                 </label>
 
-                <label>Email
+                <label>Email:
                     <input
                         value={values.email}
                         onChange={onChange}
                         name='email'
                         type='text'
+                        placeholder='Enter Email'
                     />
                 </label>
 
@@ -54,30 +56,20 @@ export default function UserForm(props) {
                         onChange={onChange}
                         name='password'
                         type='text'
+                        placeholder='Enter Password'
                     />
                 </label>
-                
-                    <a href='https://generator.lorem-ipsum.info/terms-and-conditions'>Terms Of Service</a>
-                    <p>Do you agree to the terms of Service</p>
-                <label>Yes
-                    <input
-                    type='radio'
-                    name='tos'
-                    value='true'
-                    checked={values.tos === 'true'}
-                    onChange={onChange}
-                />
-                </label>
-                
 
-                <label>No
+                <a href='https://generator.lorem-ipsum.info/terms-and-conditions'>Terms Of Service</a>
+                <p>Do you agree to the terms of Service</p>
+                <label>Yes:
                     <input
-                    type='radio'
-                    name='tos'
-                    value='false'
-                    checked={values.tos === 'false'}
-                    onChange={onChange}
-                />
+                        type='radio'
+                        name='tos'
+                        value='true'
+                        checked={values.tos === 'true'}
+                        onChange={onChange}
+                    />
                 </label>
             </div>
         </form>
